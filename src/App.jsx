@@ -1,17 +1,16 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-import BookList from './components/BookList'
+import './index.css'
+import { BookList } from './components/BookList'
+import { Route, Routes } from 'react-router-dom'
+import { AddBook } from './components/AddBook'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
-    <>
-      <BookList></BookList>
-       
-    </>
+    <Routes>
+      <Route path='/' element={<BookList></BookList>}></Route>
+      <Route path='/books' element={<BookList></BookList>}></Route>
+      <Route path='/addBook' element={<AddBook></AddBook>}></Route>
+    </Routes>
   )
 }
 
