@@ -17,11 +17,12 @@ function BookList() {
     if (error) return <p>Error : {error.message}</p>
 
     return (
-        <div>BookList
+        <div>
+            <h5>BookList</h5>
             <ul>
                 {data.findAllBooks.map((book) => (
                     <li key={book.book}>
-                        <h3>{book.title}</h3>
+                        <h3>{book.title} by {book.author}</h3> 
                     </li>
                 ))}
             </ul>
